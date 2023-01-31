@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme-mt2.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div id="mt2-header-logo-wrapper">   
+            <img src="/img/logo_monochrome.png" alt="" id="mt2-header-logo-left">   
+            <img src="/img/logo_monochrome.png" alt="" id="mt2-header-logo-right">   
+        </div>
+
+        <div id="mt2-header-line-wrapper" class="mt2-header-line">
+            <div id="mt2-header-line-1-green" class="mt2-header-line mt2-header-line-1"></div>
+            <div id="mt2-header-line-2-green" class="mt2-header-line mt2-header-line-2"></div>
+            <div id="mt2-header-line-3-blue" class="mt2-header-line"></div>
+            <div id="mt2-header-line-4-green" class="mt2-header-line mt2-header-line-4"></div>
+            <div id="mt2-header-line-5-green" class="mt2-header-line mt2-header-line-5"></div>
+            <div id="mt2-header-line-ornament-wrapper">
+                <img src="/img/line_ornament_101.svg" alt="line_2" id="mt2-header-line-ornament-1">
+            </div>
+        </div>
+
+        <!-- <button id="mt2-header-menu-button"><img id="mt2-header-menu-button-img" src="/img/show_menu_white.svg" alt="menu" class="header-menu-button-img"></button> -->
+
+        <div id="mt2-header-text-wrapper">
+            <p class="header-text">Super Clock</p>
+        </div>
+
+    </header>
+
+    <main class="main">
+        <!-- Left sidebar -->
+        <aside class="left">
+            <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu" id="toggle-menu-label">
+                <div id="module-menu-wrapper">
+
+                <div id="module-financial">
+                    <button class="module-button"><img src="/img/logo_color.png" alt="" class="module-button-icon">Financial</button>
+                </div>
+
+                <div id="module-cash">
+                    <button class="module-button"><img src="/img/cash_module.png" alt="" class="module-button-icon">Cash Book</button>
+                </div>
+
+                <div id="module-bank">
+                    <button class="module-button"><img src="/img/bank_module.png" alt="" class="module-button-icon">Bank Book</button>
+                </div>
+
+                <div id="module-sales">
+                    <button class="module-button"><img src="/img/sales_module.png" alt="" class="module-button-icon">Sales Book</button>
+                </div>
+
+                <div id="module-purchasing">
+                    <button class="module-button"><img src="/img/purchasing_module.png" alt="" class="module-button-icon">Purchasing<br>Book</button>
+                </div>
+
+                <div id="module-vat">
+                    <button class="module-button"><img src="/img/vat_module.png" alt="" class="module-button-icon">VAT</button>
+                </div>
+
+                <div id="module-inventory">
+                    <button class="module-button"><img src="/img/inventory_module.png" alt="" class="module-button-icon">Inventory</button>
+                </div>
+
+                <div id="module-assets">
+                    <button class="module-button"><img src="/img/assets_module.png" alt="" class="module-button-icon">Assets</button>
+                </div>
+
+                <div id="module-budgets">
+                    <button class="module-button"><img src="/img/budget_module.png" alt="" class="module-button-icon">Budgets</button>
+                </div>
+
+                <div id="module-projects">
+                    <button class="module-button"><img src="/img/projects_module.png" alt="" class="module-button-icon">Projects</button>
+                </div>
+
+                <div id="module-clock">
+                    <button class="module-button"><img src="/img.png" alt="" class="module-button-icon">Super Clock</button>
+                </div>
+
+                </div>
+            </label>
+        </aside>
+
+        <!-- Main content -->
+        <section class="middle">
+            <div class="content-wrapper-1">
+                <form>
+                    <div id="displayCountDown"></div>
+            
+                    <input id="userTime" type="text" placeholder="2d 3h 10m / 3:15 / 2am">
+                    
+                    <div class="buttonContainer">
+                        <input id="start" class="button" type="submit" value="Start">
+                        <button id="reset" class="button">Reset</button>
+                    </div>
+            
+                </form>
+            
+            
+                <div class='timer_blok' id="blok_0">
+                    <div class='opmaak'>
+                        <input id="parent_0">
+                        <button class="start_timer">submit 0</button>
+                    </div>
+                    <div class='opmaak' >
+                        <input type="text" name="child_0" id="child_0" data-parent="parent_0" value="">
+                        <button class="start_timer">child 0</button>
+                    </div>
+                    <div class='opmaak'>
+                        <input id="child_1" data-parent="parent_0">
+                        <button class="start_timer">child 1</button>
+                    </div>
+                    <div class='opmaak'>
+                        <input id="child_2" data-parent="parent_0">
+                        <button class="start_timer">child 2</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right sidebar -->
+        <aside class="right">Right</aside>
+    </main>
+    
+    <footer>
+        <p class="footer-text">Logged in as: Stef --- Administration: Vorstenbosch</p>
+    </footer>
+
+
+    <script src="./js/timer.js"></script>
+    <script src="./js/ui_functions.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,306 @@
+:root {
+    /* Dimensions */
+    --min-width: 1200px;
+    --header-height: 120px;
+    --footer-height: 40px;
+    --sidebar-width: 200px;
+    --content-min-width: 800px;
+  
+    /* Colors */
+    --background-contrast: #262626;
+    --background-content: rgba( 47 , 133, 250,  0.08);
+    --color-on-contrast: white;
+    --mt2-blue: #2F85FA;
+    --mt2-red: #B40047;
+    --mt2-green: #669F2A;
+  }
+  
+  body {
+    box-sizing: border-box;
+    min-width: var(--min-width);
+    margin: 0px;
+  
+    background-color: white;
+  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #262626;
+    font-weight: lighter;
+  }
+  
+  header {
+    height: var(--header-height);
+    background-color: var(--background-contrast);
+  }
+  
+  main {
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+    display: flex;
+  }
+  
+  footer {
+    height: var(--footer-height);
+    background-color: var(--background-contrast);
+  }
+  
+  /* Header and Footer classes */
+  .header-text,
+  .footer-text {
+    margin: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-on-contrast);
+    }
+  .header-text {
+    line-height: calc(var(--header-height) * 0.6);
+    font-size: 1.25rem;
+  }
+  .footer-text {
+    line-height: calc(var(--footer-height));
+    font-size: 0.75rem;
+  }
+  
+  /* --- MT2 Theme Header --- */
+  /* Title */
+  #mt2-header-text-wrapper {
+    position: relative;
+    margin: auto;
+  }
+  /* Logo */
+  #mt2-header-logo-wrapper {
+    position: absolute;
+    height: var(--header-height);
+    width: 100vw;
+    min-width: calc(var(--sidebar-width) * 2 + var(--content-min-width));
+    overflow: hidden;
+  }
+  #mt2-header-logo-left {
+    position: absolute;
+    top: -108px;
+    left: 180px;
+    width: 312px;
+    opacity: 0.75;
+  }
+  #mt2-header-logo-right {
+    position: absolute;
+    top: 37px;
+    right: 40px;
+    width: 200px;
+    opacity: 0.75;
+  }
+  /* Line */
+  .mt2-header-line {
+    position: absolute;
+    height: 2px;
+  }
+  #mt2-header-line-wrapper {
+    top: calc(var(--header-height) * 2 / 3 - 3px);
+    width: 100vw;
+    min-width: var(--min-width);
+    z-index: 10;
+  }
+  .mt2-header-line-1 {
+    width: 64px;
+  }
+  #mt2-header-line-1-red {
+    background-image: linear-gradient(to right, var(--mt2-red), var(--background-contrast));
+  }
+  #mt2-header-line-1-green {
+    background-image: linear-gradient(to right, var(--mt2-green), var(--background-contrast));
+  }
+  #mt2-header-line-1-white {
+    background-image: linear-gradient(to right, var(--color-on-contrast), var(--background-contrast));
+  }
+  .mt2-header-line-2 {
+    left: 136px;
+    width: 240px;
+  }
+  #mt2-header-line-2-red {
+    background-image: linear-gradient(to right, var(--background-contrast), var(--mt2-red) 20%, var(--mt2-red) 60%, var(--mt2-blue));
+  }
+  #mt2-header-line-2-green {
+    background-image: linear-gradient(to right, var(--background-contrast), var(--mt2-green) 20%, var(--mt2-green) 60%, var(--mt2-blue));
+  }
+  #mt2-header-line-2-white {
+    background-image: linear-gradient(to right, var(--background-contrast), var(--color-on-contrast) 20%, var(--color-on-contrast) 60%, var(--mt2-blue));
+  }
+  #mt2-header-line-3-blue {
+    left: 376px;
+    min-width: calc(100% - 752px);
+    background-color: var(--mt2-blue);
+  }
+  .mt2-header-line-4 {
+    right: 200px;
+    width: 200px;
+  }
+  #mt2-header-line-4-red {
+    background-image: linear-gradient(to right, var(--mt2-blue), var(--mt2-red) 75%);
+  }
+  #mt2-header-line-4-green {
+    background-image: linear-gradient(to right, var(--mt2-blue), var(--mt2-green) 75%);
+  }
+  #mt2-header-line-4-white {
+    background-image: linear-gradient(to right, var(--mt2-blue), var(--color-on-contrast) 75%);
+  }
+  .mt2-header-line-5 {
+    right: 0px;
+    width: 120px;
+  }
+  #mt2-header-line-5-red {
+    background-color: var(--mt2-red);
+  }
+  #mt2-header-line-5-green {
+    background-color: var(--mt2-green);
+  }
+  #mt2-header-line-5-white {
+    background-color: var(--color-on-contrast);
+  }
+  /* Line Ornament */
+  #mt2-header-line-ornament-wrapper {
+    position: absolute;
+    right: 120px;
+    top: -9px;
+    height: 20px;
+    width: 80px;
+  }
+  #mt2-header-line-ornament-0 {
+    position: relative;
+    top: 9px;
+    height: 2px;
+    background-color: var(--color-on-contrast);
+  }
+  
+  /* Menu Button */
+  /* #mt2-header-menu-button {
+    position: absolute;
+    top: calc(var(--header-height) * 2 / 3 - 21.5px);
+    left: calc(var(--sidebar-width) / 2 - 20px);
+    height: 40px;
+    width: 40px;
+    padding-top: 4px;
+    background-color: var(--background-contrast); 
+    border: 1px solid var(--color-on-contrast);
+    border-radius: 50%;
+    z-index: 20;
+    cursor: pointer;
+    opacity: .5;
+  }
+  #mt2-header-menu-button-img {
+    height: 16px;
+  }
+  #mt2-header-menu-button:hover {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  .header-menu-button-img:hover {
+    filter: invert(9%) sepia(0%) saturate(23%) hue-rotate(141deg) brightness(91%) contrast(84%);
+  } */
+    
+  /* Main area classes */
+  .left,
+  .right,
+  #toggle-menu-label {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    height: inherit;
+  }
+  .middle {
+    flex-grow: 1;  
+    min-width: var(--content-min-width);
+    display: flex;
+    flex-direction: column;
+  }
+  .content-wrapper-1 {
+    box-sizing: border-box;
+    width: 760px;
+    height: 90%;
+    margin: auto;
+    padding: 32px;
+    background-color: rgba( 47 , 133, 250,  0.08);
+    border: 1px solid var(--mt2-blue);
+  }
+  #toggle-menu {
+    display: none;  
+  }
+  #toggle-menu-label {
+    position: absolute;
+    left: calc(var(--sidebar-width) * -1);
+  }
+  #toggle-menu-label::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute ;
+    top: calc(var(--header-height) * -1 / 3 - 21.5px);
+    left: calc(var(--sidebar-width) / 2 - 20px + var(--sidebar-width));
+    height: 40px;
+    width: 40px;
+    z-index: 20;
+    background: url(/img/show_menu_white.svg) no-repeat center;
+    background-size: 40%;
+    border: 1px solid var(--color-on-contrast);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #toggle-menu:checked ~ #toggle-menu-label {
+    transform: translateX(var(--sidebar-width));
+  }
+  #toggle-menu:checked ~ #toggle-menu-label::before {
+    transform: translateX(calc(var(--sidebar-width) * -1));
+  }
+  #module-menu-wrapper {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: rgba( 47 , 133, 250,  0.08);
+    border-right: 1px solid var(--mt2-blue);
+  }
+  .module-button {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-bottom: 0.25px solid var(--mt2-blue);
+    background-color: rgba( 47 , 133, 250,  0);
+    text-align: left;
+    align-items: center;
+    padding-left: 56px;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .module-button:hover {
+    color: rgba(26, 26, 26, 0.5);
+  }
+  .module-button-icon {
+    position: absolute;
+    height: 32px;
+    left: 8px;
+  }
+  #module-financial button img {
+    height: 28px;
+  }
+  #module-budgets button img {
+    height: 34px;
+  }
+  #module-projects button {
+    border-top: 1px solid var(--mt2-blue);
+  }
+  
+  
+  /* Content classes */
+  
+  
+  .button{
+  
+      color: red;
+  }
+  .opmaak {
+      display : flex;
+  }
+   input {
+    font: inherit;
+      width: 140px
+  
+  }
+   button {
+    font: inherit;
+      width: 100px;
+  }
+  
+  
